@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lifegraph Labs &middot; v1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-bottom: 40px;
+      /*color: #5a5a5a;*/
+      background-image: url(../assets/creampaper/creampaper.png)
+    }
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: relative;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 60px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette-wide {
+      padding-top: 5px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+      padding-left: 150px;
+    }
+
+    .featurette-thin{
+      padding-top: 5px;
+      padding-left: 200px;
+      padding-right: 200px;
+      overflow: hidden;
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    .featurette-OpenGraphIMG {
+      margin-top: -20px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .featurette-iPhoneWithApps{
+      margin-top: -5px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      display: block;
+      padding-left: auto;
+      padding-right: auto;
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    .featurette-bioPics{
+      display: block;
+      padding-top: 30px;
+      padding-left: auto;
+      padding-right: auto;
+    }
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-bottom: 40px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+
+
+    <!-- NAVBAR
+    ================================================== -->
+    <!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
+    <div class="container navbar-wrapper">
+
+      <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="home.html">Lifegraph Labs</a>
+          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="home.html">Home</a></li>
+              <li class="active"><a href="about.html">About</a></li>
+              <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hacks <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="hacks.html">Door Trackr</a></li>
+                  <li><a href="hacks.html">Kendo</a></li>
+                  <li><a href="hacks.html">SushiBot</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Featured</li>
+                  <li><a href="#">Hack of the Week</a></li>
+                  <li><a href="#">Submit your own!</a></li>
+                </ul>
+              </li>
+              <li><a href="#contact">Blog</a></li>
+              <li><a href="contact2.html">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!-- /.navbar-inner -->
+      </div><!-- /.navbar -->
+
+    </div><!-- /.container -->
+
+
+      <!-- START THE FEATURETTES -->
+  <div class="container">
+    <hr class="featurette-divider">
+
+      <div class="featurette-thin">
+        <h2 class="featurette-heading">Lifegraph Labs<span class="muted"> Seamlessly persisting physical interactions.</span></h2>
+        <p class="lead">We’re six engineering students from Olin College in Needham, MA working to enable everyday people to build apps to connect their physical and virtual interactions. We are introducing a platform for developers to persist, record, and share physical interactions on Facebook's Open Graph. </p>
+
+        <img class="featurette-OpenGraphIMG" src="../assets/img/openGraphAPIDesign.gif">
+
+        <p class="lead"> Facebook’s Open Graph is an extension of its vast social graph- the Open Graph allows users’ activity on third-party websites and pages throughout the web to be naturally integrated into their Facebook experience. </p>
+        <p class="lead"> Lifegraph Labs was born from the idea that much of the lives we live, and the activities we wish to remember and share with our friends, are not done online. Oftentimes there is a fundamental disconnect between how people express themselves online and how they express themselves in everyday interactions.</p>
+
+        <!-- EXTRA INFO WE MIGHT WANT TO ADD, BUT WAS LOOKING VERBOSE -->
+
+        <!-- <p class="lead"> Today, the accepted standard device for persisting physical interactions online is the mobile phone. Smartphones, and the sizable app-network that has grown up around them, are adept at recording and consuming information. However, smartphones are disruptive of the natural flow of physical world interactions: they require users’ direct attention, funneling it, however temporarily, from whomever or whatever is happening around them in the real world into a small screen internet portal. </p>
+        <p class="lead"> The next generation of personal computing will not rely on fumbling around with a smartphone to record, share, and remember. Lifegraph Labs is building the platform that will enable these next-gen interactions by making it easy for developers to design, build, and connect any type of device to Facebook’s Open Graph infrastructure.</p> --> 
+
+      </div>
+
+  <div class="container">
+    <hr class="featurette-divider">
+      <div class="featurette-thin">
+        <div class="featurette-heading">About us <span class="muted"> Meet the Lifegraph Team!</span></h2> 
+      </div>
+
+    <div class="featurette-bioPics">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="span2">
+          <img class="img-circle" src="http://avatars.io/facebook/timcameronryan">
+          <h4>Tim Ryan</h4>
+        </div><!-- /.span4 -->
+        <div class="span2">
+          <img class="img-circle" src="http://avatars.io/facebook/jialiya.huang">
+          <h4>Jialiya Huang</h4>
+        </div><!-- /.span4 -->
+        <div class="span2">
+          <img class="img-circle" src="http://avatars.io/facebook/seungwhan.moon">
+          <h4>Shane Moon</h4>
+        </div>
+      </div>
+
+      <div class="featurette-bioPics">
+      <div class="row">
+        <div class="span2">
+          <img class="img-circle" src="http://avatars.io/facebook/jon.mckay">
+          <h4>Jon Mckay</h4>
+        </div><!-- /.span4 -->
+        <div class="span2">
+          <img class="img-circle" src="http://avatars.io/facebook/WWW.FACEB0OK.C0M">
+          <h4>Paul Booth</h4>
+        </div><!-- /.span4 -->
+        <div class="span2">
+          <img class="img-circle" src="http://avatars.io/facebook/margaretann.seger">
+          <h4>Margaret-Ann Seger</h4>
+        </div>
+      </div> 
+  </div> 
+</div>
+</div>
+</div> <!-- end of the container --> 
+
+      <!-- /.span4 -->
+        <!--<p> <a href = "home.html" </a>
+        <img src="http://avatars.io/facebook/timcameronryan"> Tim Ryan </p>
+        <p> <a href = "home.html" </a>
+        <img src="http://avatars.io/facebook/jialiya.huang"> Jialiya Huang</p>
+        <p> <a href = "home.html" </a>
+        <img src="http://avatars.io/facebook/seungwhan.moon"> Seungwhan Moon</p>
+        <p> <a href = "home.html" </a>
+        <img src="http://avatars.io/facebook/jon.mckay"> Jon McKay</p>
+        <p> <a href = "home.html" </a>
+        <img src="http://avatars.io/facebook/WWW.FACEB0OK.C0M"> Paul Booth</p>
+        <p> <a href = "home.html" </a>
+        <img src="http://avatars.io/facebook/margaretann.seger"> Margaret-Ann Seger</p> -->
+
+      <!-- /END THE FEATURETTES -->
+
+      <!-- FOOTER -->
+    <div class="container">
+      <hr class="featurette-divider">
+      <div class="featurette-thin">
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2012 Lifegraph Labs, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+    </div>
+  </hr>
+  </div>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+  </body>
+</html>
